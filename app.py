@@ -10,9 +10,9 @@ app = FastAPI()
 VLLM_BASE_URL = "http://10.72.144.171:7070"
 
 # Configuration file path
-API_KEYS_CONFIG_PATH = "/app/config/api-keys.conf"
+API_KEYS_CONFIG_PATH = "/config/api-keys.conf"
 # Log file path
-ACCESS_LOG_PATH = "/app/logs/logs.txt"
+ACCESS_LOG_PATH = "/logs/logs.txt"
 
 # Store valid API keys and their group names
 VALID_API_KEYS = {}

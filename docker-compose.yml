@@ -9,8 +9,8 @@ services:
       # Mount the host's config directory to the container's /config
       # Create a 'config' directory next to your docker-compose.yml
       # and place api-keys.conf inside it.
-      - ./config:/app/config
+      - ./config:/config
       # Mount the host's logs directory to the container's /logs
       # Create a 'logs' directory next to your docker-compose.yml
-      - ./logs:/app/logs
+      - ./logs:/logs
     restart: unless-stopped
