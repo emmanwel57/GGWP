@@ -3,9 +3,7 @@ FROM python:3.11-slim
 WORKDIR /app
 COPY . /app
 
-RUN mkdir -p /config /logs
-
-RUN pip install -r requirements.txt
+RUN pip install --trusted-host dtpheva01.ap.denso.com -i http://dtpheva01.ap.denso.com/devpi/root/pypi/+simple/ -r requirements.txt
 
 EXPOSE 7952
 

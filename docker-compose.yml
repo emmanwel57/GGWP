@@ -1,16 +1,9 @@
-version: '3.8'
-
 services:
-  vllm-middleware:
+  web:
     build: .
     ports:
-      - "7952:7952"
+      - 7952:7952
     volumes:
-      # Mount the host's config directory to the container's /config
-      # Create a 'config' directory next to your docker-compose.yml
-      # and place api-keys.conf inside it.
-      - ./config:/config
-      # Mount the host's logs directory to the container's /logs
-      # Create a 'logs' directory next to your docker-compose.yml
-      - ./logs:/logs
-    restart: unless-stopped
+      - ./config/api-keys.conf:/app/config/api-keys.conf:ro
+      - ./logs/logs.txt:/app/logs/logs.txt
+    # other settings like ports, etc.
